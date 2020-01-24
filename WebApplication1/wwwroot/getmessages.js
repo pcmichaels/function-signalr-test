@@ -15,7 +15,7 @@ function onConnected(connection) {
 }
 
 var connection = new signalR.HubConnectionBuilder()
-    .withUrl('/infoRelay')
+    .withUrl('/InfoRelay')
     .build();
 
 bindConnectionMessage(connection);

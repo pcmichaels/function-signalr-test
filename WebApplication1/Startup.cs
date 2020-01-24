@@ -36,7 +36,7 @@ namespace WebApplication1
 
             app.UseEndpoints(routes =>
             {
-                routes.MapHub<InfoRelay>("/infoRelay");
+                routes.MapHub<InfoRelay>("/InfoRelay");
             });
         }
     }

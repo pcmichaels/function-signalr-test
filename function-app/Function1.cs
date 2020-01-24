@@ -17,7 +17,7 @@ namespace pcm_test_functions
         [FunctionName("negotiate")]
         public static SignalRConnectionInfo GetSignalRInfo(
             [HttpTrigger(AuthorizationLevel.Anonymous, "post")] HttpRequest req,
-            [SignalRConnectionInfo(HubName = "infoRelay")] SignalRConnectionInfo connectionInfo)
+            [SignalRConnectionInfo(HubName = "InfoRelay")] SignalRConnectionInfo connectionInfo)
         {
             return connectionInfo;
         }
@@ -25,7 +25,7 @@ namespace pcm_test_functions
         [FunctionName("messages")]
         public static Task SendMessage(
             [HttpTrigger(AuthorizationLevel.Anonymous, "post")] object message,
-            [SignalR(HubName = "infoRelay")] IAsyncCollector<SignalRMessage> signalRMessages)
+            [SignalR(HubName = "InfoRelay")] IAsyncCollector<SignalRMessage> signalRMessages)
         {
             return signalRMessages.AddAsync(
                 new SignalRMessage
